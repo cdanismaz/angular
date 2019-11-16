@@ -1,0 +1,7 @@
+<div>
+  <p>{{movie.name}}</p>
+  <img [src]="movie.img" >
+  <p>{{movie.rating}}</p>
+  <input type="number" min="0" max="5" (input)="onRatingChanged($event)">
+  <button (click)="onRatingClicked()">Submit</button>
+</div>

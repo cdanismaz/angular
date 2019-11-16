@@ -1,0 +1,11 @@
+<app-game-control (timerTick)="onTimerTick($event)" (timerStopped)="onTimerStopped()"></app-game-control>
+
+<div *ngFor="let item of oddOrEven">
+  <div *ngIf="item == 'odd'">
+    <app-odd></app-odd>
+  </div>
+  <div *ngIf="item == 'even'">
+    <app-even></app-even>
+  </div>
+</div>
+

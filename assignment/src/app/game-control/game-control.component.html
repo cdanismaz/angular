@@ -1,0 +1,6 @@
+<div class="row">
+  <div class="col-xl-12">
+    <button class="btn btn-primary" [disabled]="isDisabled" (click)="onGameStartedClicked()">Start</button>
+    <button class="btn btn-danger" [disabled]="!isDisabled" (click)="onGameStoppedClicked()">Stop</button>
+  </div>
+</div>

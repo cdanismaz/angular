@@ -1,14 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-        <h3>Hello AppComponent</h3>
-        <hr>
-        <app-servers></app-servers>
-        <app-success-alert></app-success-alert>
-        <app-warning-alert></app-warning-alert>
-    </div>
-  </div>
+<p appHighLight>Test</p>
+<p appBetterHighlight [defaultColor]="'red'" [highlightColor]="'purple'">Better Test</p>
+<p *appUnless="true">Cansu</p>
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchDefault>Value is Default</p>
+
 </div>
-
-
 

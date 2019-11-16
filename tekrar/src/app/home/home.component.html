@@ -1,0 +1,54 @@
+<p>Welcome!</p>
+<button class="btn-primary" (click)="onMoviesClicked()">Movies</button>
+<button *ngIf="!this.authService.loggedIn" (click)="onLoginClicked()">Login</button>
+<button *ngIf="this.authService.loggedIn" (click)="onLogoutClicked()">Logout</button>
+
+<form (ngSubmit)="onUserFormSubmit(f)" #f="ngForm">
+  <!--<div id="user-data">-->
+    <!--<div>-->
+      <!--<label for="username">Username</label>-->
+      <!--<input-->
+        <!--type="text"-->
+        <!--id="username"-->
+        <!--ngModel name="username"-->
+        <!--required-->
+      <!--&gt;-->
+    <!--</div>-->
+    <!--<button type="button">Suggest a username</button>-->
+
+
+  <!--</div>-->
+  <!--<div>-->
+    <!--<label for="secret">Secret Question</label>-->
+    <!--<select name="" id="secret" ngModel name="secret">-->
+      <!--<option value="pet">First pet</option>-->
+      <!--<option value="teacher">First teacher</option>-->
+    <!--</select>-->
+  <!--</div>-->
+  <!--<hr>-->
+  <hr>
+  <div>
+    <label for="email">Email</label>
+    <input
+      type="text" id="email" name="email" ngModel
+      required email #email="ngModel">
+    <p *ngIf="email.invalid && email.touched">Invalid email</p>
+  </div>
+
+  <div>
+    <label for="subsciption">Subscription</label>
+    <select name="subscription" id="subsciption" ngModel>
+      <option value="Basic">Basic</option>
+      <option value="Advanced">Advanced</option>
+      <option value="Pro">Pro</option>
+      <p *ngIf="f.invalid && f.touched">Invalid selection</p>
+    </select>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" required ngModel name="password">
+  </div>
+  <button type="submit" (click)="submitted = true">Submit</button>
+  <p *ngIf="f.invalid && f.touched && submitted">Form is invalid</p>
+</form>

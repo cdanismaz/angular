@@ -1,0 +1,8 @@
+<h1> Active User List</h1>
+<app-user *ngFor="let u of uService.activeUserList; let i = index" [index]="i" [user]="u" [isActive]="true"></app-user>
+<hr>
+
+<h1> Deactive User List</h1>
+<app-user *ngFor="let u of uService.deactiveUserList; let i = index" [index]="i" [user]="u" [isActive]="false"></app-user>
+
+

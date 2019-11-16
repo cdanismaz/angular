@@ -1,0 +1,6 @@
+<p *ngIf="movie">{{ movie.name }}</p>
+<input #nameInput (input)="onInputChanged($event)"/>
+
+<ng-content></ng-content>
+
+<button class="btn-primary" (click)="movieLoad(10)">Change To 10</button>

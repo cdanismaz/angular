@@ -1,0 +1,8 @@
+<!-- <ul>
+    <li *ngFor="let item of menu">{{item.text}}
+      <ul *ngFor="let child of item.children">{{child.text}}</ul>
+    </li>
+</ul> -->
+<ul>
+<app-menu-item *ngFor="let item of menu" [menuitem]="item"></app-menu-item>
+</ul>
